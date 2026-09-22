@@ -1,0 +1,25 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data (trop lourd pour git, à héberger ailleurs si besoin)
+data/raw/*
+data/frames/*
+!data/raw/.gitkeep
+!data/frames/.gitkeep
+
+# Modèles volumineux
+models/*.pt
+models/*.onnx
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+EOF
+
+touch data/raw/.gitkeep data/frames/.gitkeep data/annotations/.gitkeep  
