@@ -1,4 +1,4 @@
-cat > requirements.txt << 'EOF'
+
 opencv-python
 mediapipe
 numpy
@@ -7,4 +7,3 @@ matplotlib
 streamlit
 playsound
 pandas
-EOF
