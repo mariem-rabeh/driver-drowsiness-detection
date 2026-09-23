@@ -56,6 +56,27 @@ python src/detector.py
 
 Appuyer sur `q` pour quitter.
 
+
+## Volet Machine Learning — Résultats et analyse
+
+Un classifieur SVM a été entraîné sur la feature EAR extraite du dataset MRL (2976 images train, 793 images test).
+
+| Approche | Accuracy |
+|---|---|
+| SVM (EAR seul) | 0.564 |
+| Seuil fixe (0.2231) | 0.564 |
+
+## Volet Machine Learning — Résultats et analyse
+
+Un classifieur SVM a été entraîné sur la feature EAR extraite du dataset MRL (2976 images train, 793 images test).
+
+| Approche | Accuracy |
+|---|---|
+| SVM (EAR seul) | 0.564 |
+| Seuil fixe (0.2231) | 0.564 |
+
+**Analyse** : les deux approches obtiennent des performances quasi identiques, proches du hasard. Ceci s'explique par le fait que le label drowsy/notdrowsy du dataset MRL dépend probablement de facteurs comportementaux plus larges (bâillements, hochements de tête, clignements répétés) qu'une seule mesure EAR sur une image statique ne peut capturer. À l'inverse, la calibration EAR réalisée sur mes propres annotations CVAT (state instantané ouvert/fermé) montrait une séparation nette (0.2746 vs 0.1715), confirmant que l'EAR reste fiable pour ce qu'il mesure réellement : l'état ponctuel des yeux, pas une classification comportementale globale.
+
 ## Limitations
 
 - Dataset d'entraînement limité (500 frames annotées manuellement)
